@@ -8,3 +8,82 @@
     font-weight: normal;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(276, 14%, 49%);
+}
+
+.calculator {
+    max-width: 250px;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 20%);
+}
+
+.display {
+    padding: 20px;
+    margin: 9px;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 7px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: hsl(0, 0%, 75%);
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 80%);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 70%);
+}
+
+.operator {
+    background-color: hsl(295, 20%, 50%);
+}
+
+.operator:hover {
+    background-color: hsl(295, 20%, 60%);
+}
+
+.operator:active {
+    background-color: hsl(295, 20%, 40%);
+}
+
+#clear {
+    background-color: hsl(0, 100%, 69%);
+}
+
+#clear:hover {
+    background-color: hsl(0, 100%, 72%);
+}
+
+#clear:active {
+    background-color: hsl(0, 100%, 68%);
+}
+
+.zero {
+    width: 110px;
+}
