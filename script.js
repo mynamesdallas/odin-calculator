@@ -10,6 +10,9 @@ const getHundreth = (num) => {
 }
 
 const getQuotient = (num1, num2) => {
+    if (num2 === 0) {
+        return alert("Imagine you have zero cookies and zero friends...")
+    }
     return num1 / num2;
 };
 
