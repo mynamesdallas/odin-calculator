@@ -24,7 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: hsl(0, 0%, 20%);
-}
+    box-shadow: 7px 7px 30px 1.2px;}
 
 .display {
     padding: 20px;
