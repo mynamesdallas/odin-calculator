@@ -30,7 +30,7 @@ const getDifference = (num1, num2) => {
 
 const operate = (operator, num1, num2) => {
     switch (operator) {
-        case "%": return getHundreth(num);
+        case "%": return getHundreth(num2);
         case "/": return getQuotient(num1, num2);
         case "*": return getProduct(num1, num2);
         case "+": return getSum(num1, num2);
@@ -49,6 +49,16 @@ buttons.forEach(button => {
             num2 = null;
             display.textContent = "0";
             return;
+        }
+        if (value === "%") {
+            if (!operator && num1 !== "") {
+                num1 = String(getHundreth(Number(num1)));
+                display.textContent = num1;
+            } else if (operator && num2 !== null) {
+                num2 = String(getHundreth(Number(num2)));
+                display.textContent = num2
+            }
+            return
         }
         if (value === "=") {
             if (operator && num2 !== null) {
