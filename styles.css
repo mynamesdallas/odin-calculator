@@ -84,10 +84,14 @@ button:active {
     background-color: hsl(0, 100%, 68%);
 }
 
-.zero {
-    width: 110px;
+.backspace {
+    background-color: oklch(92.4% 0.12 95.746);
 }
 
-.clear {
+.backspace:hover {
+    background-color: oklch(92.4% 0.12 75);
+}
+
+.zero {
     width: 110px;
 }
