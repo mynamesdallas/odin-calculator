@@ -85,6 +85,14 @@ buttons.forEach(button => {
             return
         }
         if (["%", "/", "*", "+", "-"].includes(value)) {
+
+            if (operator && num2 !== null && num1 !== "") {
+                const result = operate(operator, Number(num1), Number(num2));
+                display.textContent = result;
+                num1 = String(result);
+                num2 = null;
+            }
+
             operator = value;
             return;
         }
