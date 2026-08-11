@@ -54,11 +54,11 @@ buttons.forEach(button => {
         if (button.className === "backspace") {
             if (!operator) {
                 num1 = num1.slice(0, -1);
-                if (num1 === "") num1 = "0";
+                if (num1 === "") num1 = 0;
                 display.textContent = num1;
             } else if (num2 !== null) {
                 num2 = num2.slice(0, -1);
-                if (num2 === "") num2 = "0";
+                if (num2 === "") num2 = 0;
                 display.textContent = num2;
             }
             return
