@@ -89,7 +89,7 @@ buttons.forEach(button => {
             if (operator && num2 !== null && num1 !== "") {
                 const result = operate(operator, Number(num1), Number(num2));
                 display.textContent = result;
-                num1 = String(result);
+                num1 = result;
                 num2 = null;
             }
 
