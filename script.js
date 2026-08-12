@@ -77,7 +77,7 @@ buttons.forEach(button => {
         if (value === "=") {
             if (operator && num2 !== null) {
                 const result = operate(operator, Number(num1), Number(num2));
-                display.textContent = result;
+                display.textContent = Number(result).toFixed(2);
                 num1 = result;
                 operator = null;
                 num2 = null;
@@ -96,6 +96,12 @@ buttons.forEach(button => {
             operator = value;
             return;
         }
+
+        if (value === ".") {
+            if (!operator && num1.includes(".")) return;
+            if (operator && num2 !== null && num2.includes(".")) return;
+        }
+
         if (!operator) {
             num1 = num1 === 0 ? value : num1 + value;
             display.textContent = num1;
